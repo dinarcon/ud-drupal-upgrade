@@ -1,0 +1,18 @@
+uuid: 3f4903b4-7f20-4599-b6a9-1910c41dca1f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.ud_location
+id: node.ud_location.title
+field_name: title
+entity_type: node
+bundle: ud_location
+label: Location
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

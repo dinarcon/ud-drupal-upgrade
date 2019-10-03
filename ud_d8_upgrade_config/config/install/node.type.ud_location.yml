@@ -1,0 +1,16 @@
+uuid: 6fd6131c-ebb5-4304-bed8-59f99083e5fc
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    parent: 'main-menu:0:'
+name: Location
+type: ud_location
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,23 @@
+uuid: 6cf6efef-3d7b-490b-8e67-d56572e65e70
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ud_capacity
+    - node.type.ud_event
+id: node.ud_event.field_ud_capacity
+field_name: field_ud_capacity
+entity_type: node
+bundle: ud_event
+label: Capacity
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1
+  max: null
+  prefix: ''
+  suffix: ' people'
+field_type: integer

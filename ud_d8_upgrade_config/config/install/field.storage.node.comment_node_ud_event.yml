@@ -1,0 +1,20 @@
+uuid: 8df40f29-ac0d-427d-879a-fd43468f21d3
+langcode: en
+status: true
+dependencies:
+  module:
+    - comment
+    - node
+id: node.comment_node_ud_event
+field_name: comment_node_ud_event
+entity_type: node
+type: comment
+settings:
+  comment_type: comment_node_ud_event
+module: comment
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

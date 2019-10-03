@@ -1,0 +1,20 @@
+name: D8 upgrade workshop config
+type: module
+description: Configuration for Drupal 8 upgrade project. Creado por Mauricio Dinarte (@dinarcon).
+package: Migration
+core: 8.x
+hidden: 1
+dependencies:
+  - address:address
+  - drupal:datetime
+  - drupal:image
+  - drupal:migrate
+  - drupal:options
+  - drupal:taxonomy
+  - drupal:text
+  - drupal:views
+  - ud_d8_upgrade:ud_d8_upgrade_config
+  - migrate_plus:migrate_plus
+  - migrate_tools:migrate_tools
+  - paragraphs:paragraphs
+  - social_media_links_field:social_media_links_field

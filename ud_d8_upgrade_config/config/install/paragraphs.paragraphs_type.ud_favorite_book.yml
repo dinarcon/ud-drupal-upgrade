@@ -1,0 +1,9 @@
+uuid: 5d487ed8-4b8f-431a-9cbb-6eda296fe62b
+langcode: en
+status: true
+dependencies: {  }
+id: ud_favorite_book
+label: 'Favorite book'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

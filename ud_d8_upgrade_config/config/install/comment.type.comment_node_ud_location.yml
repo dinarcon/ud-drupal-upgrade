@@ -1,0 +1,8 @@
+uuid: 7ea892df-3e57-4fc7-b68e-e82aa4cfda1b
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_ud_location
+label: 'Location comment'
+target_entity_type_id: node
+description: null

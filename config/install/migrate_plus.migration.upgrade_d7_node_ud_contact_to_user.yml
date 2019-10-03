@@ -1,0 +1,55 @@
+uuid: b48a5fd9-beb0-498e-3878-22a0d9c52cef
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_node_ud_contact_to_user
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Nodes (Contact)'
+source:
+  plugin: d7_node
+  node_type: ud_contact
+process:
+  name: title
+  mail:
+    plugin: sub_process
+    source: field_ud_email
+    process:
+      value: email
+  init: '@mail'
+  created:
+    plugin: callback
+    callable: time
+  status:
+    plugin: default_value
+    default_value: 1
+  pseudo_ud_book_paragraph:
+    - plugin: extract
+      source: field_ud_favorite_book
+      index:
+        - 0
+        - target_id
+    - plugin: migration_lookup
+      migration: upgrade_d7_node_ud_book_to_paragraph
+  field_ud_favorite_book:
+    plugin: sub_process
+    source:
+      - '@pseudo_ud_book_paragraph'
+    process:
+      target_id: '0'
+      target_revision_id: '1'
+destination:
+  plugin: 'entity:user'
+migration_dependencies:
+  required:
+    - upgrade_d7_node_ud_book_to_paragraph
+#    - upgrade_d7_user
+#    - upgrade_d7_node_type
+#  optional:
+#    - upgrade_d7_field_instance
+#    - upgrade_d7_comment_field_instance

@@ -1,0 +1,38 @@
+uuid: bd0cb233-1212-40ec-97bb-f979c824bd5d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image
+    - node.type.ud_event
+  module:
+    - image
+id: node.ud_event.field_image
+field_name: field_image
+entity_type: node
+bundle: ud_event
+label: Image
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: ''
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: '5 MB'
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: false
+  title_field: false
+  default_image:
+    alt: ''
+    title: ''
+    width: null
+    height: null
+    uuid: ''
+  alt_field_required: true
+  title_field_required: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

@@ -1,0 +1,25 @@
+uuid: dd7905c7-2abd-4345-b71f-01562a3620b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ud_price
+    - node.type.ud_event
+id: node.ud_event.field_ud_price
+field_name: field_ud_price
+entity_type: node
+bundle: ud_event
+label: Price
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: !!float 0
+default_value_callback: ''
+settings:
+  min: !!float 0
+  max: null
+  prefix: '$ '
+  suffix: USD
+field_type: decimal

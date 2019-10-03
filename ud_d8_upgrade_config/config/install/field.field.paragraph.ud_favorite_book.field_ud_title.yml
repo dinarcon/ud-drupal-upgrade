@@ -1,0 +1,19 @@
+uuid: f86c2363-e2ad-4652-b3eb-059efed1fee8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ud_title
+    - paragraphs.paragraphs_type.ud_favorite_book
+id: paragraph.ud_favorite_book.field_ud_title
+field_name: field_ud_title
+entity_type: paragraph
+bundle: ud_favorite_book
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

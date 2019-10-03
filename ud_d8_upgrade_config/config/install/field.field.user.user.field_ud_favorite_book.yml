@@ -1,0 +1,31 @@
+uuid: f2b975d0-cc87-453d-a736-802c3ce9f0ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_ud_favorite_book
+    - paragraphs.paragraphs_type.ud_favorite_book
+  module:
+    - entity_reference_revisions
+    - user
+id: user.user.field_ud_favorite_book
+field_name: field_ud_favorite_book
+entity_type: user
+bundle: user
+label: 'Favorite book'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      ud_favorite_book: ud_favorite_book
+    target_bundles_drag_drop:
+      ud_favorite_book:
+        enabled: true
+        weight: 2
+field_type: entity_reference_revisions

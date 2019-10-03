@@ -1,0 +1,117 @@
+uuid: 47cc973e-6a44-40a1-933d-246097d87c31
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_ud_event.default
+    - field.field.node.ud_event.comment_node_ud_event
+    - field.field.node.ud_event.field_image
+    - field.field.node.ud_event.field_tags
+    - field.field.node.ud_event.field_ud_capacity
+    - field.field.node.ud_event.field_ud_date
+    - field.field.node.ud_event.field_ud_description
+    - field.field.node.ud_event.field_ud_price
+    - field.field.node.ud_event.field_ud_social_media_links
+    - field.field.node.ud_event.field_ud_venue
+    - node.type.ud_event
+  module:
+    - comment
+    - datetime
+    - image
+    - social_media_links_field
+    - text
+    - user
+id: node.ud_event.default
+targetEntityType: node
+bundle: ud_event
+mode: default
+content:
+  comment_node_ud_event:
+    label: hidden
+    type: comment_default
+    weight: 8
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    region: content
+  field_image:
+    label: hidden
+    weight: 0
+    type: image
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    region: content
+  field_tags:
+    label: inline
+    weight: 6
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_ud_capacity:
+    label: inline
+    weight: 4
+    type: number_integer
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    region: content
+  field_ud_date:
+    label: inline
+    weight: 1
+    type: datetime_default
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    region: content
+  field_ud_description:
+    label: hidden
+    weight: 5
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_ud_price:
+    label: inline
+    weight: 2
+    type: number_decimal
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    region: content
+  field_ud_social_media_links:
+    weight: 7
+    label: above
+    settings:
+      appearance:
+        orientation: h
+        show_name: 0
+      link_attributes:
+        target: '<none>'
+        rel: '<none>'
+    third_party_settings: {  }
+    type: social_media_links_field_default
+    region: content
+  field_ud_venue:
+    label: inline
+    weight: 3
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

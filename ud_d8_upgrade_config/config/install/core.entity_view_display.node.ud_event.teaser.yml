@@ -1,0 +1,66 @@
+uuid: 6ac9a351-7450-4f0c-a1f0-d8ca0a24fcaf
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.ud_event.comment_node_ud_event
+    - field.field.node.ud_event.field_image
+    - field.field.node.ud_event.field_tags
+    - field.field.node.ud_event.field_ud_capacity
+    - field.field.node.ud_event.field_ud_date
+    - field.field.node.ud_event.field_ud_description
+    - field.field.node.ud_event.field_ud_price
+    - field.field.node.ud_event.field_ud_venue
+    - image.style.medium
+    - node.type.ud_event
+  module:
+    - datetime
+    - image
+    - text
+    - user
+id: node.ud_event.teaser
+targetEntityType: node
+bundle: ud_event
+mode: teaser
+content:
+  field_image:
+    label: hidden
+    weight: 2
+    type: image
+    settings:
+      image_style: medium
+      image_link: content
+    third_party_settings: {  }
+    region: content
+  field_ud_date:
+    label: inline
+    weight: 0
+    type: datetime_default
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    region: content
+  field_ud_description:
+    type: text_trimmed
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+  field_ud_venue:
+    label: inline
+    weight: 1
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+hidden:
+  comment_node_ud_event: true
+  field_tags: true
+  field_ud_capacity: true
+  field_ud_price: true
+  links: true

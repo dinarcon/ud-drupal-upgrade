@@ -1,0 +1,21 @@
+uuid: 22012f87-acfd-4386-96b0-1eb29ba3d3fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ud_date
+    - node.type.ud_event
+  module:
+    - datetime
+id: node.ud_event.field_ud_date
+field_name: field_ud_date
+entity_type: node
+bundle: ud_event
+label: Date
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

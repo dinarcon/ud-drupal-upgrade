@@ -1,0 +1,51 @@
+uuid: 69d8730f-941c-4027-ae5c-6b0c66c41f9b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_ud_location.default
+    - field.field.node.ud_location.comment_node_ud_location
+    - field.field.node.ud_location.field_image
+    - field.field.node.ud_location.field_ud_address
+    - node.type.ud_location
+  module:
+    - address
+    - comment
+    - image
+    - user
+id: node.ud_location.default
+targetEntityType: node
+bundle: ud_location
+mode: default
+content:
+  comment_node_ud_location:
+    label: hidden
+    type: comment_default
+    weight: 20
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    region: content
+  field_image:
+    label: above
+    weight: 2
+    type: image
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    region: content
+  field_ud_address:
+    label: above
+    weight: 1
+    type: address_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

@@ -1,0 +1,30 @@
+uuid: aa219c08-bdc9-4bcc-9d51-518b77e18ea4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ud_product_type
+    - node.type.ud_product
+    - taxonomy.vocabulary.ud_product_type
+id: node.ud_product.field_ud_product_type
+field_name: field_ud_product_type
+entity_type: node
+bundle: ud_product
+label: Type
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      ud_product_type: ud_product_type
+    sort:
+      field: name
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

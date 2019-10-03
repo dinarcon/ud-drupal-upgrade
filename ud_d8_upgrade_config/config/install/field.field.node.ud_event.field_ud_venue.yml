@@ -1,0 +1,30 @@
+uuid: b1641eb8-4478-4533-81d7-ed30f3255d0f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ud_venue
+    - node.type.ud_event
+    - node.type.ud_location
+id: node.ud_event.field_ud_venue
+field_name: field_ud_venue
+entity_type: node
+bundle: ud_event
+label: Venue
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      ud_location: ud_location
+    sort:
+      field: title
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

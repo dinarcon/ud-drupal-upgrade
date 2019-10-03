@@ -1,0 +1,32 @@
+uuid: 16a10321-55be-4394-a6e6-413572765799
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ud_favorite_book.field_ud_author
+    - field.field.paragraph.ud_favorite_book.field_ud_title
+    - paragraphs.paragraphs_type.ud_favorite_book
+id: paragraph.ud_favorite_book.default
+targetEntityType: paragraph
+bundle: ud_favorite_book
+mode: default
+content:
+  field_ud_author:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ud_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

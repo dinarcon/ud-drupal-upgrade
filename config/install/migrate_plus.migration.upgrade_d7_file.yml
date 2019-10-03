@@ -1,0 +1,47 @@
+uuid: cc5c3040-dc64-4423-9bf9-adaacce1c1e2
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_file
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Public files'
+source:
+  plugin: d7_file
+  scheme: public
+  constants:
+    # Path to file in server or URL
+    # http://d7.migration-training.test/
+    source_base_path: '/path/to/files'
+process:
+  fid: fid
+  filename: filename
+  source_full_path:
+    -
+      plugin: concat
+      delimiter: /
+      source:
+        - constants/source_base_path
+        - filepath
+    -
+      plugin: urlencode
+  uri:
+    plugin: file_copy
+    source:
+      - '@source_full_path'
+      - uri
+  filemime: filemime
+  status: status
+  created: timestamp
+  changed: timestamp
+  uid: uid
+destination:
+  plugin: 'entity:file'
+migration_dependencies:
+  required: {  }
+  optional: {  }

@@ -1,0 +1,53 @@
+uuid: 6513637a-a2d9-4f4c-b0b8-e35293df1ac1
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_taxonomy_term_ud_product_type
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Taxonomy terms (Product type)'
+source:
+  plugin: d7_taxonomy_term
+  bundle: ud_product_type
+process:
+  tid: tid
+#  vid:
+#    plugin: migration_lookup
+#    migration: upgrade_d7_taxonomy_vocabulary
+#    source: vid
+  name: name
+  description/value: description
+  description/format: format
+  weight: weight
+  parent_id:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: parent
+    -
+      plugin: migration_lookup
+      migration: upgrade_d7_taxonomy_term
+  parent:
+    plugin: default_value
+    default_value: 0
+    source: '@parent_id'
+  forum_container: is_container
+  changed: timestamp
+  langcode: language
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: ud_product_type
+#migration_dependencies:
+#  required:
+#    - upgrade_d7_taxonomy_vocabulary
+#  optional:
+#    - upgrade_d7_field_instance
+#    - upgrade_d7_taxonomy_vocabulary
+#    - upgrade_d7_taxonomy_term_tags
+#    - upgrade_d7_taxonomy_term_ud_product_type
+#    - upgrade_d7_taxonomy_term

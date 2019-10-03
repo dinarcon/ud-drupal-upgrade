@@ -1,0 +1,29 @@
+uuid: b939f758-74e4-4d87-859a-43d44ae8521e
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_node_ud_book_to_paragraph
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Nodes (Book)'
+source:
+  plugin: d7_node
+  node_type: ud_book
+process:
+  field_ud_title: title
+  field_ud_author: field_ud_author
+destination:
+  plugin: 'entity_reference_revisions:paragraph'
+  default_bundle: ud_favorite_book
+migration_dependencies:
+  required:
+    - upgrade_d7_user
+#    - upgrade_d7_node_type
+#  optional:
+#    - upgrade_d7_field_instance
+#    - upgrade_d7_comment_field_instance

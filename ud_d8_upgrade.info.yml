@@ -1,0 +1,11 @@
+name: D8 upgrade workshop
+type: module
+description: Example module for Drupal 8 upgrade project. Creado por Mauricio Dinarte (@dinarcon).
+package: Migration
+core: 8.x
+dependencies:
+  - drupal:migrate
+  - migrate_drupal:migrate_drupal
+  - migrate_plus:migrate_plus
+  - migrate_tools:migrate_tools
+  - ud_d8_upgrade:ud_d8_upgrade_config
