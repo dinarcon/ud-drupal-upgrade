@@ -1,0 +1,30 @@
+{
+  "name": "drupal/ud_d8_upgrade",
+  "type": "drupal-module",
+  "description": "Example Drupal 8 upgrade migration. https://understanddrupal.com/",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://github.com/dinarcon/ud_d8_upgrade",
+  "minimum-stability": "dev",
+  "authors": [
+    {
+      "name": "Mauricio Dinarte (dinarcon)",
+      "homepage": "https://www.drupal.org/u/dinarcon",
+      "role": "Maintainer"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/dinarcon/ud_d8_upgrade/issues",
+    "source": "https://github.com/dinarcon/ud_d8_upgrade"
+  },
+  "require": {
+    "drupal/address": "^1.7",
+    "drupal/migrate_plus": "^4.2",
+    "drupal/migrate_tools": "^4.5",
+    "drupal/paragraphs": "^1.10",
+    "drupal/social_media_links": "^2.6"
+  },
+  "require-dev": {
+    "drupal/devel": "^2.1"
+  }
+}
