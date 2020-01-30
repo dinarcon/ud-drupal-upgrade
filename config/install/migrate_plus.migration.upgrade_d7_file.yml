@@ -16,8 +16,8 @@ source:
   scheme: public
   constants:
     # Path to file in server or URL
-    # http://d7.migration-training.test/
-    source_base_path: '/path/to/files'
+    # /var/www/drupalvm/drupal7/
+    source_base_path: 'http://d7.migration-training.test/'
 process:
   fid: fid
   filename: filename
