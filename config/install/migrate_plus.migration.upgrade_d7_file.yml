@@ -17,7 +17,7 @@ source:
   constants:
     # Path to file in server or URL
     # /var/www/drupalvm/drupal7/
-    source_base_path: 'http://d7.migration-training.test/'
+    source_base_path: 'http://d7.drupal-upgrades.test/'
 process:
   fid: fid
   filename: filename
