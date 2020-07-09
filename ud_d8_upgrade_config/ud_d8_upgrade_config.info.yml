@@ -3,6 +3,7 @@ type: module
 description: Configuration for Drupal 8 upgrade project. Creado por Mauricio Dinarte (@dinarcon).
 package: Migration
 core: 8.x
+core_version_requirement: ^8 || ^9
 hidden: 1
 dependencies:
   - address:address
