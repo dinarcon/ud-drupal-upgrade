@@ -10,7 +10,6 @@ dependencies:
     - field.field.node.ud_event.field_ud_date
     - field.field.node.ud_event.field_ud_description
     - field.field.node.ud_event.field_ud_price
-    - field.field.node.ud_event.field_ud_social_media_links
     - field.field.node.ud_event.field_ud_venue
     - image.style.thumbnail
     - node.type.ud_event
@@ -19,7 +18,6 @@ dependencies:
     - datetime
     - image
     - path
-    - social_media_links_field
     - text
 id: node.ud_event.default
 targetEntityType: node
@@ -82,12 +80,6 @@ content:
     settings:
       placeholder: ''
     third_party_settings: {  }
-    region: content
-  field_ud_social_media_links:
-    weight: 121
-    settings: {  }
-    third_party_settings: {  }
-    type: social_media_links_field_default
     region: content
   field_ud_venue:
     weight: 53

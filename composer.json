@@ -21,8 +21,7 @@
     "drupal/address": "^1.7",
     "drupal/migrate_plus": "^4.2",
     "drupal/migrate_tools": "^4.5",
-    "drupal/paragraphs": "^1.10",
-    "drupal/social_media_links": "^2.6"
+    "drupal/paragraphs": "^1.10"
   },
   "require-dev": {
     "drupal/devel": "^2.1"

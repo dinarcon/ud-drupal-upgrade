@@ -67,14 +67,6 @@ process:
   field_ud_venue:
     plugin: get
     source: field_ud_venue
-  field_ud_social_media_links:
-    plugin: gnuget_social_links
-    source:
-      - field_ud_facebook_url
-      - field_ud_twitter_url
-    network_ids:
-      - facebook
-      - twitter
 destination:
   plugin: 'entity:node'
   default_bundle: ud_event
