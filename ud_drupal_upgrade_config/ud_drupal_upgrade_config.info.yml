@@ -1,6 +1,6 @@
-name: D8 upgrade workshop config
+name: Drupal upgrade training config
 type: module
-description: Configuration for Drupal 8 upgrade project. Creado por Mauricio Dinarte (@dinarcon).
+description: Configuration for Drupal upgrade training. Created by Mauricio Dinarte (@dinarcon). https://understanddrupal.com
 package: Migration
 core: 8.x
 core_version_requirement: ^8 || ^9
@@ -14,7 +14,7 @@ dependencies:
   - drupal:taxonomy
   - drupal:text
   - drupal:views
-  - ud_d8_upgrade:ud_d8_upgrade_config
+  - ud_drupal_upgrade:ud_drupal_upgrade_config
   - migrate_plus:migrate_plus
   - migrate_tools:migrate_tools
   - paragraphs:paragraphs

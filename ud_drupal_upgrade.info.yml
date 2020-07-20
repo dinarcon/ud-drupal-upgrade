@@ -1,6 +1,6 @@
-name: D8 upgrade workshop
+name: Drupal upgrade training
 type: module
-description: Example module for Drupal 8 upgrade project. Creado por Mauricio Dinarte (@dinarcon).
+description: Example module for Drupal upgrade training. Created by Mauricio Dinarte (@dinarcon). https://understanddrupal.com
 package: Migration
 core: 8.x
 core_version_requirement: ^8 || ^9
@@ -9,4 +9,4 @@ dependencies:
   - migrate_drupal:migrate_drupal
   - migrate_plus:migrate_plus
   - migrate_tools:migrate_tools
-  - ud_d8_upgrade:ud_d8_upgrade_config
+  - ud_drupal_upgrade:ud_drupal_upgrade_config

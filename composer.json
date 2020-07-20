@@ -1,10 +1,10 @@
 {
-  "name": "drupal/ud_d8_upgrade",
+  "name": "drupal/ud_drupal_upgrade",
   "type": "drupal-module",
-  "description": "Example Drupal 8 upgrade migration. https://understanddrupal.com/",
+  "description": "Example module for Drupal upgrade training. Created by Mauricio Dinarte (@dinarcon). https://understanddrupal.com",
   "keywords": ["Drupal"],
   "license": "GPL-2.0+",
-  "homepage": "https://github.com/dinarcon/ud_d8_upgrade",
+  "homepage": "https://github.com/dinarcon/ud_drupal_upgrade",
   "minimum-stability": "dev",
   "authors": [
     {
@@ -14,8 +14,8 @@
     }
   ],
   "support": {
-    "issues": "https://github.com/dinarcon/ud_d8_upgrade/issues",
-    "source": "https://github.com/dinarcon/ud_d8_upgrade"
+    "issues": "https://github.com/dinarcon/ud_drupal_upgrade/issues",
+    "source": "https://github.com/dinarcon/ud_drupal_upgrade"
   },
   "require": {
     "drupal/core": "^8 | ^9",
