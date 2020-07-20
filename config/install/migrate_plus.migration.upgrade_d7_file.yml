@@ -16,8 +16,8 @@ source:
   scheme: public
   constants:
     # Path to file in server or URL
-    # /var/www/drupalvm/drupal7/
-    source_base_path: 'http://d7.drupal-upgrades.test/'
+    # http://d7.drupal-upgrade-training.test/
+    source_base_path: '/var/www/drupalvm/drupal7/'
 process:
   fid: fid
   filename: filename
