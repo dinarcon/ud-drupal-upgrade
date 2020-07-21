@@ -1,4 +1,4 @@
-uuid: e6ae752a-9129-44bf-9bbc-d1d5cd7315a2
+uuid: 622811c2-5588-4aea-a449-fd915aadc3c3
 langcode: en
 status: true
 dependencies: {  }
@@ -20,7 +20,10 @@ process:
       source: name
     -
       plugin: user_update_8002
-  label: name
+  label:
+    -
+      plugin: get
+      source: name
   permissions:
     -
       plugin: static_map
@@ -41,10 +44,13 @@ process:
         'edit own forum topics': 'edit own forum content'
     -
       plugin: flatten
-  weight: weight
+  weight:
+    -
+      plugin: get
+      source: weight
 destination:
   plugin: 'entity:user_role'
-migration_dependencies:
-  optional:
-    - upgrade_d7_filter_format
-  required: {  }
+#migration_dependencies:
+#  optional:
+#    - upgrade_d7_filter_format
+#  required: {  }

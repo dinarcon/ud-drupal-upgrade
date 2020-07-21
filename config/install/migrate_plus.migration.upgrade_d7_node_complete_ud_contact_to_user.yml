@@ -1,0 +1,142 @@
+uuid: 5d57d081-c78a-47ed-b4fd-53f33d37fba4
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_node_complete_ud_contact_to_user
+class: Drupal\node\Plugin\migrate\D7NodeTranslation
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Node complete (Contact) to user'
+source:
+  plugin: d7_node_complete
+  node_type: ud_contact
+process:
+
+#  See user_schema().
+#  Primary Key: Unique user ID. Example: 1
+#  uid:
+#    -
+#      plugin: get
+#      source: uid
+
+  name:
+    -
+      plugin: get
+      source: title
+
+#  User's password (hashed). Example: $S$E4oxQpXA46EHaOJfIwilXnkeYcUGBZk34OySXmXwOQf9UNWP4EzY
+#  pass:
+#    -
+#      plugin: get
+#      source: pass
+
+  mail:
+    -
+      plugin: sub_process
+      source: field_ud_email
+      process:
+        value: email
+
+  created:
+    -
+      plugin: get
+      source: created
+
+#  Timestamp for previous time user accessed the site. Example: 280299600
+#  access:
+#    -
+#      plugin: get
+#      source: access
+
+#  Timestamp for user's last login.
+#  login:
+#    -
+#      plugin: get
+#      source: login
+
+  status:
+    -
+      plugin: default_value
+      default_value: 1
+
+# User's time zone. Example: 'America/New_York'
+#  timezone:
+#    -
+#      plugin: get
+#      source: timezone
+
+
+# User's default language. Example: 'en'
+#  langcode:
+#    -
+#      plugin: user_langcode
+#      source: entity_language
+#      fallback_to_site_default: false
+
+#  See \Drupal\user\Entity\User::baseFieldDefinitions()
+#  The user's preferred language code for receiving emails and viewing the site. Example: 'en'
+#  preferred_langcode:
+#    -
+#      plugin: user_langcode
+#      source: language
+#      fallback_to_site_default: true
+
+#  The user's preferred language code for viewing administration pages. Example: 'en'
+#  preferred_admin_langcode:
+#    -
+#      plugin: user_langcode
+#      source: language
+#      fallback_to_site_default: true
+
+#  E-mail address used for initial account creation.
+  init:
+    -
+      plugin: get
+      source: '@mail'
+
+#  Stores user roles. Example: ['administrator']
+#  roles:
+#    -
+#      plugin: migration_lookup
+#      migration: upgrade_d7_user_role
+#      source: roles
+
+#  File ID for the user's profile picture. Example: 1
+#  user_picture:
+#    -
+#      plugin: default_value
+#      source: picture
+#      default_value: null
+#    -
+#      plugin: migration_lookup
+#      migration: upgrade_d7_file
+
+  pseudo_ud_book_paragraph:
+    - plugin: extract
+      source: field_ud_favorite_book
+      index:
+        - 0
+        - target_id
+    - plugin: migration_lookup
+      migration: upgrade_d7_node_complete_ud_book_to_paragraph
+  field_ud_favorite_book:
+    plugin: sub_process
+    source:
+      - '@pseudo_ud_book_paragraph'
+    process:
+      target_id: '0'
+      target_revision_id: '1'
+destination:
+  plugin: 'entity:user'
+migration_dependencies:
+  required:
+    - upgrade_d7_node_complete_ud_book_to_paragraph
+#    - upgrade_d7_user
+#    - upgrade_d7_node_type
+#  optional:
+#    - upgrade_d7_field_instance
+#    - upgrade_d7_comment_field_instance

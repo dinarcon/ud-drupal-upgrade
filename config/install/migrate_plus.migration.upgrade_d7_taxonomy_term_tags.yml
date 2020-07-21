@@ -1,4 +1,4 @@
-uuid: 11ca6cf9-145f-45c8-b60f-a57123d8df02
+uuid: ba586483-8cc0-4e3d-80ee-977a0406071b
 langcode: en
 status: true
 dependencies: {  }
@@ -15,15 +15,31 @@ source:
   plugin: d7_taxonomy_term
   bundle: tags
 process:
-  tid: tid
+  tid:
+    -
+      plugin: get
+      source: tid
 #  vid:
-#    plugin: migration_lookup
-#    migration: upgrade_d7_taxonomy_vocabulary
-#    source: vid
-  name: name
-  description/value: description
-  description/format: format
-  weight: weight
+#    -
+#      plugin: migration_lookup
+#      migration: upgrade_d7_taxonomy_vocabulary
+#      source: vid
+  name:
+    -
+      plugin: get
+      source: name
+  description/value:
+    -
+      plugin: get
+      source: description
+  description/format:
+    -
+      plugin: get
+      source: format
+  weight:
+    -
+      plugin: get
+      source: weight
   parent_id:
     -
       plugin: skip_on_empty
@@ -31,14 +47,26 @@ process:
       source: parent
     -
       plugin: migration_lookup
-      migration: upgrade_d7_taxonomy_term
+      migration:
+#        - upgrade_d7_taxonomy_term_ud_product_type
+        - upgrade_d7_taxonomy_term_tags
   parent:
-    plugin: default_value
-    default_value: 0
-    source: '@parent_id'
-  forum_container: is_container
-  changed: timestamp
-  langcode: language
+    -
+      plugin: default_value
+      default_value: 0
+      source: '@parent_id'
+  forum_container:
+    -
+      plugin: get
+      source: is_container
+  changed:
+    -
+      plugin: get
+      source: timestamp
+  langcode:
+    -
+      plugin: get
+      source: language
 destination:
   plugin: 'entity:taxonomy_term'
   default_bundle: tags
@@ -50,4 +78,5 @@ destination:
 #    - upgrade_d7_taxonomy_vocabulary
 #    - upgrade_d7_taxonomy_term_tags
 #    - upgrade_d7_taxonomy_term_ud_product_type
-#    - upgrade_d7_taxonomy_term
+#    - upgrade_d7_taxonomy_term_ud_product_type
+#    - upgrade_d7_taxonomy_term_tags
