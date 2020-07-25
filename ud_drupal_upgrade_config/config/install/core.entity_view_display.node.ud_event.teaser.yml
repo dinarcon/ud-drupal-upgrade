@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.ud_event.field_ud_date
     - field.field.node.ud_event.field_ud_description
     - field.field.node.ud_event.field_ud_price
+    - field.field.node.ud_event.field_ud_social_links
     - field.field.node.ud_event.field_ud_venue
     - image.style.medium
     - node.type.ud_event
@@ -63,4 +64,5 @@ hidden:
   field_tags: true
   field_ud_capacity: true
   field_ud_price: true
+  field_ud_social_links: true
   links: true

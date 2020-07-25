@@ -1,0 +1,21 @@
+uuid: 3dde0974-7482-4849-9983-b20c3df346e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ud_social_links
+    - node.type.ud_event
+  module:
+    - social_link_field
+id: node.ud_event.field_ud_social_links
+field_name: field_ud_social_links
+entity_type: node
+bundle: ud_event
+label: 'Social links'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: social_links

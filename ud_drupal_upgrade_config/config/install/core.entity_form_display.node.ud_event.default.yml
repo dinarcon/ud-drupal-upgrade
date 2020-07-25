@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.ud_event.field_ud_date
     - field.field.node.ud_event.field_ud_description
     - field.field.node.ud_event.field_ud_price
+    - field.field.node.ud_event.field_ud_social_links
     - field.field.node.ud_event.field_ud_venue
     - image.style.thumbnail
     - node.type.ud_event
@@ -18,6 +19,7 @@ dependencies:
     - datetime
     - image
     - path
+    - social_link_field
     - text
 id: node.ud_event.default
 targetEntityType: node
@@ -26,18 +28,18 @@ mode: default
 content:
   comment_node_ud_event:
     type: comment_default
-    weight: 20
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     region: content
   created:
     type: datetime_timestamp
-    weight: 10
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
   field_image:
-    weight: 49
+    weight: 10
     type: image_image
     settings:
       progress_indicator: throbber
@@ -45,29 +47,30 @@ content:
     third_party_settings: {  }
     region: content
   field_tags:
-    weight: 45
+    weight: 9
     type: entity_reference_autocomplete
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+      match_limit: 10
     third_party_settings: {  }
     region: content
   field_ud_capacity:
-    weight: 42
+    weight: 7
     type: number
     settings:
       placeholder: ''
     third_party_settings: {  }
     region: content
   field_ud_date:
-    weight: 51
+    weight: 11
     type: datetime_default
     settings: {  }
     third_party_settings: {  }
     region: content
   field_ud_description:
-    weight: 43
+    weight: 8
     type: text_textarea
     settings:
       rows: 5
@@ -75,24 +78,33 @@ content:
     third_party_settings: {  }
     region: content
   field_ud_price:
-    weight: 52
+    weight: 12
     type: number
     settings:
       placeholder: ''
     third_party_settings: {  }
     region: content
+  field_ud_social_links:
+    weight: 14
+    settings:
+      select_social: false
+      disable_weight: false
+    third_party_settings: {  }
+    type: social_links
+    region: content
   field_ud_venue:
-    weight: 53
+    weight: 13
     type: entity_reference_autocomplete
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+      match_limit: 10
     third_party_settings: {  }
     region: content
   path:
     type: path
-    weight: 30
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -100,26 +112,26 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 15
+    weight: 3
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 120
+    weight: 15
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 16
+    weight: 4
     region: content
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: -5
+    weight: 0
     region: content
     settings:
       size: 60
@@ -127,11 +139,12 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 1
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+      match_limit: 10
     region: content
     third_party_settings: {  }
 hidden: {  }

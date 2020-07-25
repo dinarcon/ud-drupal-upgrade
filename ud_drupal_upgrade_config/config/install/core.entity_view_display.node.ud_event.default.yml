@@ -11,12 +11,14 @@ dependencies:
     - field.field.node.ud_event.field_ud_date
     - field.field.node.ud_event.field_ud_description
     - field.field.node.ud_event.field_ud_price
+    - field.field.node.ud_event.field_ud_social_links
     - field.field.node.ud_event.field_ud_venue
     - node.type.ud_event
   module:
     - comment
     - datetime
     - image
+    - social_link_field
     - text
     - user
 id: node.ud_event.default
@@ -85,6 +87,15 @@ content:
       scale: 2
       prefix_suffix: true
     third_party_settings: {  }
+    region: content
+  field_ud_social_links:
+    weight: 7
+    label: above
+    settings:
+      new_tab: '1'
+      orientation: vertical
+    third_party_settings: {  }
+    type: network_name
     region: content
   field_ud_venue:
     label: inline
