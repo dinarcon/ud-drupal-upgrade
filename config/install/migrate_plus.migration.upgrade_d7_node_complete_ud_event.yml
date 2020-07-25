@@ -139,6 +139,11 @@ process:
 #    -
 #      plugin: get
 #      source: field_ud_twitter_url
+  field_ud_social_links:
+    plugin: ud_social_links
+    source:
+      - field_ud_twitter_url
+      - field_ud_facebook_url
 destination:
   plugin: 'entity_complete:node'
   translations: true
@@ -147,7 +152,7 @@ migration_dependencies:
   required:
     - upgrade_d7_user
     - upgrade_d7_file
-    - upgrade_d7_node_ud_location
+    - upgrade_d7_node_complete_ud_location
 #    - upgrade_d7_node_type
 #  optional:
 #    - upgrade_d7_field_instance

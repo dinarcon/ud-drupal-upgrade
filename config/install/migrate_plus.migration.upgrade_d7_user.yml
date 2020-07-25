@@ -87,9 +87,9 @@ destination:
 migration_dependencies:
   required:
     - upgrade_d7_user_role
-#  optional:
+  optional:
 #    - upgrade_d7_field_instance
-#    - upgrade_d7_file
+    - upgrade_d7_file
 #    - upgrade_user_picture_field_instance
 #    - upgrade_user_picture_entity_display
 #    - upgrade_user_picture_entity_form_display

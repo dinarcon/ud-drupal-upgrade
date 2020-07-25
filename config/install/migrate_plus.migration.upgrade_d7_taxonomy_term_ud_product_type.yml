@@ -70,13 +70,13 @@ process:
 destination:
   plugin: 'entity:taxonomy_term'
   default_bundle: ud_product_type
-migration_dependencies:
-  required:
-    - upgrade_d7_taxonomy_vocabulary
-  optional:
-    - upgrade_d7_field_instance
-    - upgrade_d7_taxonomy_vocabulary
-    - upgrade_d7_taxonomy_term_tags
-    - upgrade_d7_taxonomy_term_ud_product_type
-    - upgrade_d7_taxonomy_term_ud_product_type
-    - upgrade_d7_taxonomy_term_tags
+#migration_dependencies:
+#  required:
+#    - upgrade_d7_taxonomy_vocabulary
+#  optional:
+#    - upgrade_d7_field_instance
+#    - upgrade_d7_taxonomy_vocabulary
+#    - upgrade_d7_taxonomy_term_tags
+#    - upgrade_d7_taxonomy_term_ud_product_type
+#    - upgrade_d7_taxonomy_term_ud_product_type
+#    - upgrade_d7_taxonomy_term_tags
