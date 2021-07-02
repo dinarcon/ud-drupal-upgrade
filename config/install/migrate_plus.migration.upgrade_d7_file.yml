@@ -15,9 +15,9 @@ source:
   plugin: d7_file
   scheme: public
   constants:
-    # Path to file in server or URL
-    # http://d7.drupal-upgrade-training.test/
-    source_base_path: /var/www/drupalvm/drupal7/
+    # Path to public files directory in server or FQDN
+    # /var/www/drupal7/
+    source_base_path: http://ddev-agaric-drupal7-web/
 process:
   fid:
     -
