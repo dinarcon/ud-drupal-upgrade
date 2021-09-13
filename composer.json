@@ -19,14 +19,14 @@
   },
   "require": {
     "drupal/core": "^8 | ^9",
-    "drupal/address": "^1.8",
+    "drupal/address": "^1.9",
     "drupal/migrate_plus": "^5.1",
     "drupal/migrate_tools": "^5.0",
     "drupal/paragraphs": "^1.12",
-    "drupal/social_link_field": "^1.1",
-    "drush/drush": "^10"
+    "drupal/social_link_field": "^1.1@alpha",
+    "drush/drush": "~10.3.0"
   },
   "require-dev": {
-    "drupal/devel": "^2.1"
+    "drupal/devel": "^4.1"
   }
 }
