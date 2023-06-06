@@ -24,7 +24,7 @@
     "drupal/migrate_tools": "^5.0 | ^6.0",
     "drupal/paragraphs": "^1.12",
     "drupal/social_link_field": "^1.1@alpha",
-    "drush/drush": "~10.3.0 | ^11.0"
+    "drush/drush": "~10.3.0 | ^11.0 | ^12.0"
   },
   "require-dev": {
     "drupal/devel": "^4.1"
