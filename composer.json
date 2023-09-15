@@ -18,13 +18,13 @@
     "source": "https://github.com/dinarcon/ud_drupal_upgrade"
   },
   "require": {
-    "drupal/core": "^8 | ^9 | ^10",
+    "drupal/core": "^9 | ^10",
     "drupal/address": "^1.12 | ^2.0@beta",
     "drupal/migrate_plus": "^5.0 | ^6.0",
     "drupal/migrate_tools": "^5.0 | ^6.0",
     "drupal/paragraphs": "^1.16",
     "drupal/social_link_field": "^2.0",
-    "drush/drush": "~10.3.0 | ^11.0 | ^12.0"
+    "drush/drush": "^11.0 | ^12.0"
   },
   "require-dev": {
     "drupal/devel": "^5"
