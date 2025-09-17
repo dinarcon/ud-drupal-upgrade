@@ -2,7 +2,7 @@ name: Drupal upgrade training
 type: module
 description: Example module for Drupal upgrade training. Created by Mauricio Dinarte (@dinarcon). https://understanddrupal.com
 package: Migration
-core_version_requirement: ^9 || ^10
+core_version_requirement: ^9 || ^10 || ^11
 dependencies:
   - drupal:migrate
   - social_link_field:social_link_field
