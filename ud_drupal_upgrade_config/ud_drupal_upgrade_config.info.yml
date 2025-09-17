@@ -13,6 +13,5 @@ dependencies:
   - drupal:text
   - drupal:views
   - migrate_plus:migrate_plus
-  - migrate_tools:migrate_tools
   - paragraphs:paragraphs
   - social_link_field:social_link_field

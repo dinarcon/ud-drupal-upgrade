@@ -1,17 +1,13 @@
-uuid: 5d57d081-c78a-47ed-b4fd-53f33d37fba4
-langcode: en
-status: true
-dependencies: {  }
 id: upgrade_d7_node_complete_ud_contact_to_user
 class: Drupal\node\Plugin\migrate\D7NodeTranslation
-field_plugin_method: null
-cck_plugin_method: null
 migration_tags:
   - 'Drupal 7'
   - Content
-migration_group: migrate_drupal_7
+  - udrupal_content
+  - understanddrupal_com
 label: 'Node complete (Contact) to user'
 source:
+  key: migrate
   plugin: d7_node_complete
   node_type: ud_contact
 process:

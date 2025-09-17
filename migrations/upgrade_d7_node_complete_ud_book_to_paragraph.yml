@@ -1,17 +1,13 @@
-uuid: 34ebf45e-05b6-4c6b-b7c2-d71b3f5f3076
-langcode: en
-status: true
-dependencies: {  }
 id: upgrade_d7_node_complete_ud_book_to_paragraph
 class: Drupal\node\Plugin\migrate\D7NodeTranslation
-field_plugin_method: null
-cck_plugin_method: null
 migration_tags:
   - 'Drupal 7'
   - Content
-migration_group: migrate_drupal_7
+  - udrupal_content
+  - understanddrupal_com
 label: 'Node complete (Book) to paragraph'
 source:
+  key: migrate
   plugin: d7_node_complete
   node_type: ud_book
 process:

@@ -1,19 +1,15 @@
-uuid: 3209067f-d37e-4c88-b8b6-0763912c0e47
-langcode: en
-status: true
-dependencies: {  }
-id: upgrade_d7_taxonomy_term_ud_product_type
+id: upgrade_d7_taxonomy_term_tags
 class: Drupal\migrate\Plugin\Migration
-field_plugin_method: null
-cck_plugin_method: null
 migration_tags:
   - 'Drupal 7'
   - Content
-migration_group: migrate_drupal_7
-label: 'Taxonomy terms (Product type)'
+  - udrupal_content
+  - understanddrupal_com
+label: 'Taxonomy terms (Tags)'
 source:
+  key: migrate
   plugin: d7_taxonomy_term
-  bundle: ud_product_type
+  bundle: tags
 process:
   tid:
     -
@@ -48,8 +44,8 @@ process:
     -
       plugin: migration_lookup
       migration:
-        - upgrade_d7_taxonomy_term_ud_product_type
-#        - upgrade_d7_taxonomy_term_tags
+#        - upgrade_d7_taxonomy_term_ud_product_type
+        - upgrade_d7_taxonomy_term_tags
   parent:
     -
       plugin: default_value
@@ -69,7 +65,7 @@ process:
       source: language
 destination:
   plugin: 'entity:taxonomy_term'
-  default_bundle: ud_product_type
+  default_bundle: tags
 #migration_dependencies:
 #  required:
 #    - upgrade_d7_taxonomy_vocabulary

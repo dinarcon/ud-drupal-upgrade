@@ -1,19 +1,15 @@
-uuid: ecf166d1-f3db-4e48-9b65-34d5da36e353
-langcode: en
-status: true
-dependencies: {  }
-id: upgrade_d7_node_complete_article
+id: upgrade_d7_node_complete_ud_product
 class: Drupal\node\Plugin\migrate\D7NodeTranslation
-field_plugin_method: null
-cck_plugin_method: null
 migration_tags:
   - 'Drupal 7'
   - Content
-migration_group: migrate_drupal_7
-label: 'Node complete (Article)'
+  - udrupal_content
+  - understanddrupal_com
+label: 'Node complete (Product)'
 source:
+  key: migrate
   plugin: d7_node_complete
-  node_type: article
+  node_type: ud_product
 process:
   nid:
     -
@@ -72,20 +68,27 @@ process:
     -
       plugin: get
       source: source_langcode
-  comment_node_article/0/status:
+  comment_node_ud_product/0/status:
     -
       plugin: get
       source: comment
-  body:
+  field_ud_price:
+    -
+      plugin: get
+      source: field_ud_price
+  field_ud_product_type:
+    -
+      plugin: get
+      source: field_ud_product_type
+  field_ud_description:
     -
       plugin: sub_process
-      source: body
+      source: field_ud_description
       process:
         value: value
         summary: summary
         format:
-          -
-            plugin: static_map
+          - plugin: static_map
             source: format
             bypass: true
             default_value: plain_text
@@ -93,12 +96,6 @@ process:
               plain_text: plain_text
               filtered_html: basic_html
               full_html: full_html
-  field_tags:
-    -
-      plugin: sub_process
-      source: field_tags
-      process:
-        target_id: tid
   field_image:
     -
       plugin: sub_process
@@ -112,11 +109,11 @@ process:
 destination:
   plugin: 'entity_complete:node'
   translations: true
-  default_bundle: article
+  default_bundle: ud_product
 migration_dependencies:
   required:
     - upgrade_d7_user
-    - upgrade_d7_taxonomy_term_tags
+    - upgrade_d7_taxonomy_term_ud_product_type
     - upgrade_d7_file
 #    - upgrade_d7_node_type
 #  optional:

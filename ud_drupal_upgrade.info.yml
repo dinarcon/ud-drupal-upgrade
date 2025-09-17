@@ -8,5 +8,4 @@ dependencies:
   - social_link_field:social_link_field
   - migrate_drupal:migrate_drupal
   - migrate_plus:migrate_plus
-  - migrate_tools:migrate_tools
   - ud_drupal_upgrade:ud_drupal_upgrade_config
